@@ -50,3 +50,14 @@ function desencriptar() {
     swal("Ooops!", "Debes ingresar texto", "warning");
   }
 }
+
+function copiartexto() {
+  let botonCopiar = document.getElementById("copiar")
+  let texto = document.getElementById("texto").value;
+
+  botonCopiar.addEventListener("click", () => {
+    texto.select();
+    document.execCommand("copy");
+
+  });
+}
