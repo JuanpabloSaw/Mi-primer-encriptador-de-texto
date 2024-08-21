@@ -51,13 +51,19 @@ function desencriptar() {
   }
 }
 
-function copiartexto() {
-  let botonCopiar = document.getElementById("copiar")
-  let texto = document.getElementById("texto").value;
+function copiar() {
+  let textarea = document.getElementById("texto");
+  let texto = textarea.value;
 
-  botonCopiar.addEventListener("click", () => {
-    texto.select();
-    document.execCommand("copy");
-
-  });
+  if (texto) {
+    navigator.clipboard.writeText(texto).then(() => {
+      swal("Texto copiado!", "El texto ha sido copiado al portapapeles", "success");
+    }).catch((error) => {
+      console.error("Error al copiar texto:", error);
+      swal("Error", "No se pudo copiar el texto al portapapeles", "error");
+    });
+  } else {
+    swal("Ooops!", "No hay texto para copiar", "warning");
+  }
 }
+
