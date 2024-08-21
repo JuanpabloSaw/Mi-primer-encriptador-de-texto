@@ -20,20 +20,23 @@
 }
 
 .logo {
-  width: 120px;
+  width: 120px; 
   height: 40px;
-  margin-left: 40px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
-.creditos p {
+.creditos {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
-  text-align: center;
 }
+
 
 .texto {
   position: absolute;
@@ -220,17 +223,22 @@
     display: flex;
     flex-direction: row;
   }
+  .titulo-enorme p {
+    top: 0%;
+    display: none;
+    visibility: hidden;
+  }
   .logo {
-    width: 70px;
-    margin-left: 3%;
-    margin-top: 2%;
+    width: 60px;
+    margin-top: 5px;
+    
   }
   .encriptar {
     width: 100%;
   }
   .texto {
     width: 80%;
-    height: 60%;
+    height: 50%;
     left: 10%;
     top: 5%;
   }
@@ -238,7 +246,7 @@
   .terminos {
     width: 80%;
     left: 10%;
-    top: 67%;
+    top: 57%;
   }
   .terminos p {
     font-size: 16px;
@@ -246,7 +254,7 @@
   .botones {
     width: 80%;
     left: 10%;
-    top: 70%;
+    top: 60%;
   }
   .boton-encriptar, 
   .boton-desencriptar,
@@ -266,7 +274,7 @@
     width: 80%;
     height: 15%;
     left: 10%;
-    top: 80%;
+    top: 70%;
   }
   .mensaje-encriptado {
     width: 100%;
@@ -276,5 +284,8 @@
     top: 0%;
     display: none;
     visibility: hidden;
+  }
+  .creditos {
+    width: 100%;
   }
 }

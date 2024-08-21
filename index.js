@@ -67,3 +67,16 @@ function copiar() {
   }
 }
 
+function formatearTexto(texto) {
+  // Convertir a minúsculas
+  texto = texto.toLowerCase();
+
+  // Reemplazar caracteres acentuados por sus equivalentes sin acento
+  texto = texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+  return texto;
+}
+
+document.getElementById("texto").addEventListener("input", function () {
+  this.value = formatearTexto(this.value);
+});
